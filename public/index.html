@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body {
+            
+            background-image: url("28364667_7413539.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #a16cb3;
+        }
+
+        form {
+            background-color: #fff;
+            background: transparent;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(13, 93, 91, 0.5);
+            width: 300px;
+        }
+        form:hover {
+            box-shadow: 0 0 10px rgba(246, 63, 231, 0.6);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #5c2d55;
+        }
+
+        input[type="text"], input[type="password"] {
+            background: none;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            color: rgb(17, 182, 31);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            color: rgb(179, 239, 202);
+        }
+
+        .error {
+            color: red;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="signupForm" action="/signup" method="POST">
+        <h1>Signup</h1>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <div id="errorMessage" class="error"></div>
+        <button type="submit" >Signup</button>
+    </form>
+
+    <script>
+        
+        document.getElementById('signupForm').addEventListener('submit', function(event) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if (password !== confirmPassword) {
+                event.preventDefault(); // Prevent form submission
+                errorMessage.textContent = 'Passwords do not match!';
+            } else {
+                errorMessage.textContent = ''; // Clear any previous error messages
+                alert("login successful");
+            }
+            
+        });
+    </script>
+</body>
+</html>

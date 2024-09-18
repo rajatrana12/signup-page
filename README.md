@@ -26,10 +26,12 @@ To get a local copy of this project up and running, follow these steps:
 
 - Node.js installed on your machine
 - A code editor (like Visual Studio Code)
+- Screenshot:"C:\Users\rajat\Downloads\WhatsApp Image 2024-09-18 at 1.50.46 PM.jpeg"
 
 ### Installation
 
 1. Clone the repository:
    ```bash
    git clone :https://github.com/rajatrana12/signup-page
-   Screenshot:"C:\Users\rajat\Downloads\WhatsApp Image 2024-09-18 at 1.50.46 PM.jpeg"
+   
+   
